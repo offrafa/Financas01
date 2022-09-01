@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="DAO\FinancasContext.cs" />
     <Compile Include="Entidades\Movimentacao.cs" />
     <Compile Include="Entidades\Tipo.cs" />
     <Compile Include="Entidades\Usuario.cs" />
