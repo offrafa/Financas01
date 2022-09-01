@@ -12,6 +12,9 @@ namespace Financas01.DAO
         public DbSet<Usuario> usuarios { get; set; }
         public DbSet<Movimentacao> movimentacoes { get; set; }
 
-        
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Movimentacao>().HasRequired(m => m.usuario);
+        }
     }
 }
