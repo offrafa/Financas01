@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace Financas01.Entidades
+{
+    public class Movimentacao
+    {
+        public int Id { get; set; }
+
+        public decimal Valor { get; set; }
+
+        public DateTime Data { get; set; }
+
+        public Tipo tipo  { get; set; }
+
+        public int UsuarioId { get; set; }
+
+        public Usuario usuario { get; set; }
+    }
+}
