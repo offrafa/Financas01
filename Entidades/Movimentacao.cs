@@ -13,7 +13,7 @@ namespace Financas01.Entidades
 
         public DateTime Data { get; set; }
 
-        public Tipo tipo  { get; set; }
+        public Tipo tipo { get; set; }
 
         public int UsuarioId { get; set; }
 

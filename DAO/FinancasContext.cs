@@ -9,8 +9,8 @@ namespace Financas01.DAO
 {
     public class FinancasContext : DbContext
     {
-        public DbSet<Usuario> usuarios { get; set; }
-        public DbSet<Movimentacao> movimentacoes { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Movimentacao> Movimentacoes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
