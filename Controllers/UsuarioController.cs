@@ -9,7 +9,7 @@ namespace Financas01.Controllers
     public class UsuarioController : Controller
     {
         // GET: Usuario
-        public ActionResult Index()
+        public ActionResult Form()
         {
             return View();
         }
