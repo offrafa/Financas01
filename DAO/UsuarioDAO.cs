@@ -16,12 +16,13 @@ namespace Financas01.DAO
 
         public void Adiciona(Usuario usuario)
         {
-
+            Context.Usuarios.Add(usuario);
+            Context.SaveChanges();
         }
 
         public IList<Usuario> Lista()
         {
-
+            return Context.Usuarios.ToList();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Financas01.Entidades;
+﻿using Financas01.DAO;
+using Financas01.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,13 @@ namespace Financas01.Controllers
 {
     public class UsuarioController : Controller 
     {
+        private UsuarioDAO usuarioDAO;
+        public UsuarioController(UsuarioDAO usuarioDAO)
+        {
+            this.usuarioDAO = usuarioDAO;
+        }
+
+
         // GET: Usuario
         public ActionResult Form()
         {
@@ -19,12 +27,18 @@ namespace Financas01.Controllers
         {
             if (ModelState.IsValid)
             {
-
+                usuarioDAO.Adiciona(usuario);
+                return RedirectToAction("Index");
             }
             else
             {
                 return View("Form", usuario);
             }
+        }
+        public ActionResult Index()
+        {
+            IList<Usuario> usuarios = usuarioDAO.Lista();
+            return View(usuarios);
         }
     }
 }
