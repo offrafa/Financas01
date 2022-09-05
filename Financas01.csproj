@@ -122,6 +122,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="DAO\FinancasContext.cs" />
+    <Compile Include="DAO\UsuarioDAO.cs" />
     <Compile Include="Entidades\Movimentacao.cs" />
     <Compile Include="Entidades\Tipo.cs" />
     <Compile Include="Entidades\Usuario.cs" />
