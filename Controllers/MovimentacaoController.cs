@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Financas01.DAO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,22 @@ namespace Financas01.Controllers
 {
     public class MovimentacaoController : Controller
     {
-        // GET: Movimentacao
-        public ActionResult Index()
+        private MovimentacaoDAO movimentacaoDAO;
+        private UsuarioDAO UsuarioDAO;
+
+        public MovimentacaoController(MovimentacaoDAO movimentacaoDAO, UsuarioDAO usuarioDAO)
         {
+            this.movimentacaoDAO = movimentacaoDAO;
+            this.UsuarioDAO = usuarioDAO;
+        }
+
+
+
+         // GET: Movimentacao
+        public ActionResult form()
+        {
+            ViewBag.Usuarios = UsuarioDAO.Lista();
+
             return View();
         }
     }
