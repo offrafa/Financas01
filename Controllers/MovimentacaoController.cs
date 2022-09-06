@@ -1,4 +1,5 @@
 ﻿using Financas01.DAO;
+using Financas01.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,10 @@ namespace Financas01.Controllers
             ViewBag.Usuarios = UsuarioDAO.Lista();
 
             return View();
+        }
+        public ActionResult Adiciona(Movimentacao movimentacao)
+        {
+            ViewBag.Movimentacao = movimentacao;
         }
     }
 }

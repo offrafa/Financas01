@@ -1,7 +1,25 @@
-﻿
-@{
-    ViewBag.Title = "form";
-}
+﻿@model Financas01.Entidades.Movimentacao
 
-<h2>form</h2>
 
+@using (Html.BeginForm("Adiciona", "Movimentacao", FormMethod.Post))
+{
+    @Html.LabelFor(m => m.Valor, "Valor")
+    @Html.TextBoxFor(m => m.Valor, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.Valor)
+
+    @Html.LabelFor(m => m.UsuarioId, "Usuario")
+    @Html.DropDownListFor(m => m.UsuarioId,
+        new SelectList(ViewBag.Usuarios, "Id", "Nome"),
+        new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.UsuarioId)
+
+    @Html.LabelFor(m => m.tipo, "Tipo")
+    @Html.EnumDropDownListFor(m => m.tipo, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.tipo)
+
+    @Html.LabelFor(m => m.Data, "Data")
+    @Html.TextBoxFor(m => m.Data, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.Data)
+
+    <input type="submit" value="Cadastrar" />
+}         }
