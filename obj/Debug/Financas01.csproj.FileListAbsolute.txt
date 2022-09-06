@@ -89,3 +89,7 @@ C:\Users\rafae\Área de Trabalho\Financas01\Financas01\obj\Debug\Financas01.dll
 C:\Users\rafae\Área de Trabalho\Financas01\Financas01\obj\Debug\Financas01.pdb
 C:\Users\rafae\Área de Trabalho\Financas01\Financas01\obj\Debug\Financas01.Migrations.inicio.resources
 C:\Users\rafae\Área de Trabalho\Financas01\Financas01\obj\Debug\Financas01.csproj.GenerateResource.cache
+C:\Users\rafae\Área de Trabalho\Financas01\Financas01\bin\WebMatrix.Data.dll
+C:\Users\rafae\Área de Trabalho\Financas01\Financas01\bin\WebMatrix.WebData.dll
+C:\Users\rafae\Área de Trabalho\Financas01\Financas01\bin\WebMatrix.WebData.xml
+C:\Users\rafae\Área de Trabalho\Financas01\Financas01\bin\WebMatrix.Data.xml
