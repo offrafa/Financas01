@@ -148,6 +148,7 @@
     <Content Include="Views\Usuario\Form.cshtml" />
     <Content Include="Views\Usuario\Index.cshtml" />
     <Content Include="Views\Movimentacao\form.cshtml" />
+    <Content Include="Views\Movimentacao\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

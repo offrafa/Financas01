@@ -30,7 +30,21 @@ namespace Financas01.Controllers
         }
         public ActionResult Adiciona(Movimentacao movimentacao)
         {
-            ViewBag.Movimentacao = movimentacao;
+            if (ModelState.IsValid)
+            {
+                movimentacaoDAO.Adiciona(movimentacao);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                ViewBag.Usuarios = UsuarioDAO.Lista();
+                return View("Form", movimentacao);
+            }
+        }
+        public ActionResult Index()
+        {
+            IList<Movimentacao> movimentacaos = movimentacaoDAO.Lista();
+            return View(movimentacaos);
         }
     }
 }

@@ -13,9 +13,9 @@
         new { @class = "form-control" })
     @Html.ValidationMessageFor(m => m.UsuarioId)
 
-    @Html.LabelFor(m => m.tipo, "Tipo")
-    @Html.EnumDropDownListFor(m => m.tipo, new { @class = "form-control" })
-    @Html.ValidationMessageFor(m => m.tipo)
+    @Html.LabelFor(m => m.Tipo, "Tipo")
+    @Html.EnumDropDownListFor(m => m.Tipo, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.Tipo)
 
     @Html.LabelFor(m => m.Data, "Data")
     @Html.TextBoxFor(m => m.Data, new { @class = "form-control" })
