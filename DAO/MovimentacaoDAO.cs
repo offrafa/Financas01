@@ -30,7 +30,32 @@ namespace Financas01.DAO
 
         internal IList<Movimentacao> Busca(decimal? valorMinimo, decimal? valorMaximo, DateTime? dataMinima, DateTime? dataMaxima, Tipo? tipo, int? usuarioId)
         {
-            throw new NotImplementedException();
+            IQueryable<Movimentacao> resultado = _context.Movimentacoes;
+            if (valorMinimo.HasValue)
+            {
+                resultado = resultado.Where(m => m.Valor >= valorMinimo);
+            }
+            if (valorMaximo.HasValue)
+            {
+                resultado = resultado.Where(m => m.Valor <= valorMaximo);
+            }
+            if (dataMinima.HasValue)
+            {
+                resultado = resultado.Where(m => m.Data >= dataMinima);
+            }
+            if (dataMaxima.HasValue)
+            {
+                resultado = resultado.Where(m => m.Data <= dataMaxima);
+            }
+            if (tipo.HasValue)
+            {
+                resultado = resultado.Where(m => m.Tipo == tipo);
+            }
+            if (usuarioId.HasValue)
+            {
+                resultado = resultado.Where(m => m.UsuarioId == usuarioId);
+            }
+            return resultado.ToList();
         }
     }
 }
