@@ -52,6 +52,7 @@ namespace Financas01.Controllers
         {
             model.Usuarios = UsuarioDAO.Lista();
             model.Movimentacoes = movimentacaoDAO.BuscarUsuarios(model.UsuarioId);
+            return View(model);
         }
     }
 }

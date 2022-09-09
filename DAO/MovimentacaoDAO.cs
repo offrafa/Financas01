@@ -23,5 +23,9 @@ namespace Financas01.DAO
         {
             return _context.Movimentacoes.ToList();
         }
+        public IList<Movimentacao> BuscarUsuarios(int? usuarioId)
+        {
+            return _context.Movimentacoes.Where(m => m.UsuarioId == usuarioId).ToList();
+        }
     }
 }

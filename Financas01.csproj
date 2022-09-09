@@ -159,6 +159,7 @@
     <Content Include="Views\Movimentacao\form.cshtml" />
     <Content Include="Views\Movimentacao\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Movimentacao\MovimentacoesPorUsuarios.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
