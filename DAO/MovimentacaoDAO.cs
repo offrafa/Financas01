@@ -27,5 +27,10 @@ namespace Financas01.DAO
         {
             return _context.Movimentacoes.Where(m => m.UsuarioId == usuarioId).ToList();
         }
+
+        internal IList<Movimentacao> Busca(decimal? valorMinimo, decimal? valorMaximo, DateTime? dataMinima, DateTime? dataMaxima, Tipo? tipo, int? usuarioId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

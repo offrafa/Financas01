@@ -143,6 +143,7 @@
       <DependentUpon>202209011445105_inicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\BuscaMovimentacoesModel.cs" />
     <Compile Include="Models\MovimentacoesPorUsuariosModel.cs" />
     <Compile Include="Models\UsuarioModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
