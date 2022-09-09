@@ -47,5 +47,9 @@ namespace Financas01.Controllers
             IList<Movimentacao> movimentacaos = movimentacaoDAO.Lista();
             return View(movimentacaos);
         }
+        public ActionResult MovimentacoesPorUsuarios (int? usuarioId)
+        {
+            movimentacaoDAO.buscarPorUsuarios(usuarioId);
+        }
     }
 }
